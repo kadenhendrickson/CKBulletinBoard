@@ -42,3 +42,7 @@ extension CKRecord {
     }
 }
 
+extension Message: Equatable {
+    static func == (lhs: Message, rhs: Message)
+}
+

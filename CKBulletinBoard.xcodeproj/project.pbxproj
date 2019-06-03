@@ -13,6 +13,8 @@
 		DC4E93AF22A58390000F11F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93AD22A58390000F11F9 /* Main.storyboard */; };
 		DC4E93B122A58392000F11F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93B022A58392000F11F9 /* Assets.xcassets */; };
 		DC4E93B422A58392000F11F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93B222A58392000F11F9 /* LaunchScreen.storyboard */; };
+		DCD6ADF622A5BAE200DAFA6D /* Message Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */; };
+		DCD6ADF922A5C00C00DAFA6D /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DC4E93B022A58392000F11F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4E93B322A58392000F11F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC4E93B522A58392000F11F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Controller.swift"; sourceTree = "<group>"; };
+		DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +83,26 @@
 				DC1733F122A5875A001B8E04 /* Model */,
 				DC4E93AB22A58390000F11F9 /* ViewController.swift */,
 				DC4E93AD22A58390000F11F9 /* Main.storyboard */,
+				DCD6ADF722A5BFE300DAFA6D /* Controllers */,
 			);
 			path = CKBulletinBoard;
+			sourceTree = "<group>";
+		};
+		DCD6ADF722A5BFE300DAFA6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */,
+				DCD6ADFA22A5C01100DAFA6D /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCD6ADFA22A5C01100DAFA6D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD6ADF622A5BAE200DAFA6D /* Message Controller.swift in Sources */,
 				DC1733F022A58754001B8E04 /* Message.swift in Sources */,
 				DC4E93AC22A58390000F11F9 /* ViewController.swift in Sources */,
 				DC4E93AA22A58390000F11F9 /* AppDelegate.swift in Sources */,
+				DCD6ADF922A5C00C00DAFA6D /* MessageListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
