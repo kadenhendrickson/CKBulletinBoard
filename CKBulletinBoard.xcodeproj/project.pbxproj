@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC1733F022A58754001B8E04 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1733EF22A58754001B8E04 /* Message.swift */; };
 		DC4E93AA22A58390000F11F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4E93A922A58390000F11F9 /* AppDelegate.swift */; };
 		DC4E93AC22A58390000F11F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4E93AB22A58390000F11F9 /* ViewController.swift */; };
 		DC4E93AF22A58390000F11F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93AD22A58390000F11F9 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC1733EF22A58754001B8E04 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DC4E93A622A58390000F11F9 /* CKBulletinBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKBulletinBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4E93A922A58390000F11F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC4E93AB22A58390000F11F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC1733F122A5875A001B8E04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC1733EF22A58754001B8E04 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC1733F222A587C9001B8E04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC4E93A922A58390000F11F9 /* AppDelegate.swift */,
+				DC4E93B022A58392000F11F9 /* Assets.xcassets */,
+				DC4E93B222A58392000F11F9 /* LaunchScreen.storyboard */,
+				DC4E93B522A58392000F11F9 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DC4E939D22A58390000F11F9 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +75,10 @@
 		DC4E93A822A58390000F11F9 /* CKBulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
-				DC4E93A922A58390000F11F9 /* AppDelegate.swift */,
+				DC1733F222A587C9001B8E04 /* Resources */,
+				DC1733F122A5875A001B8E04 /* Model */,
 				DC4E93AB22A58390000F11F9 /* ViewController.swift */,
 				DC4E93AD22A58390000F11F9 /* Main.storyboard */,
-				DC4E93B022A58392000F11F9 /* Assets.xcassets */,
-				DC4E93B222A58392000F11F9 /* LaunchScreen.storyboard */,
-				DC4E93B522A58392000F11F9 /* Info.plist */,
 			);
 			path = CKBulletinBoard;
 			sourceTree = "<group>";
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1733F022A58754001B8E04 /* Message.swift in Sources */,
 				DC4E93AC22A58390000F11F9 /* ViewController.swift in Sources */,
 				DC4E93AA22A58390000F11F9 /* AppDelegate.swift in Sources */,
 			);
@@ -284,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DT6NQCY8FM;
-				INFOPLIST_FILE = CKBulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DT6NQCY8FM;
-				INFOPLIST_FILE = CKBulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
