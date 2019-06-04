@@ -16,6 +16,7 @@ class MessageController {
     
     //SourceOfTruth
     var messages: [Message] = []
+
     
     //Standard Database
     let privateDB = CKContainer.default().privateCloudDatabase
@@ -23,11 +24,9 @@ class MessageController {
     //CRUD Functions
     
         //Create
-    func createMessage(text: String, timestamp: Date) {
+    func createMessage(text: String, timestamp: Date, completion: @escaping (Bool) -> Void) {
         let message = Message(text: text, timestamp: timestamp)
-        self.saveMessage(message: message) { (_) in
-            //Bad Error Handling - fix later
-        }
+        self.saveMessage(message: message, completion: completion)
     }
         //Remove
     func removeMessage(message: Message, completion: @escaping (Bool) -> ()) {
@@ -57,7 +56,7 @@ class MessageController {
                 return
             }
             guard let record = record, let message = Message(ckRecord: record) else {completion(false); return}
-            self.messages.append(message)
+            self.messages.insert(message, at: 0)
             print("Message Posted!")
             completion(true)
         }
@@ -76,7 +75,8 @@ class MessageController {
             }
             
             guard let records = records else {completion(false); return}
-            let messages = records.compactMap({Message(ckRecord: $0)})
+            var messages = records.compactMap({Message(ckRecord: $0)})
+            messages.sort{$0.timestamp > $1.timestamp}
             self.messages = messages
             completion(true)
             
@@ -88,7 +88,22 @@ class MessageController {
         
         let predicate = NSPredicate(value: true)
         
-        
         let subscription = CKQuerySubscription(recordType: Constants.recordKey, predicate: predicate, options: .firesOnRecordCreation)
+        
+        let notificationInfo = CKSubscription.NotificationInfo()
+        notificationInfo.alertBody = "New Post! That's pretty damn cool."
+        notificationInfo.shouldBadge = true
+        notificationInfo.soundName = "default"
+        
+        subscription.notificationInfo = notificationInfo
+        
+        privateDB.save(subscription) { (_, error) in
+            if let error = error {
+                print("😝 There was an error in \(#function) : \(error) : \(error.localizedDescription) 😝")
+                completion(error)
+                return
+            }
+            completion(nil)
+        }
     }
 }
