@@ -9,25 +9,26 @@
 /* Begin PBXBuildFile section */
 		DC1733F022A58754001B8E04 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1733EF22A58754001B8E04 /* Message.swift */; };
 		DC4E93AA22A58390000F11F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4E93A922A58390000F11F9 /* AppDelegate.swift */; };
-		DC4E93AC22A58390000F11F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4E93AB22A58390000F11F9 /* ViewController.swift */; };
 		DC4E93AF22A58390000F11F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93AD22A58390000F11F9 /* Main.storyboard */; };
 		DC4E93B122A58392000F11F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93B022A58392000F11F9 /* Assets.xcassets */; };
 		DC4E93B422A58392000F11F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E93B222A58392000F11F9 /* LaunchScreen.storyboard */; };
 		DCD6ADF622A5BAE200DAFA6D /* Message Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */; };
 		DCD6ADF922A5C00C00DAFA6D /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */; };
+		DCF34DF522A5CD0000A5DB8B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF34DF422A5CD0000A5DB8B /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC1733EF22A58754001B8E04 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DC4E93A622A58390000F11F9 /* CKBulletinBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKBulletinBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4E93A922A58390000F11F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC4E93AB22A58390000F11F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC4E93AE22A58390000F11F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC4E93B022A58392000F11F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4E93B322A58392000F11F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC4E93B522A58392000F11F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message Controller.swift"; sourceTree = "<group>"; };
 		DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
+		DCF34DF222A5CCFE00A5DB8B /* CKBulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKBulletinBoard.entitlements; sourceTree = "<group>"; };
+		DCF34DF422A5CD0000A5DB8B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF34DF522A5CD0000A5DB8B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +67,7 @@
 			children = (
 				DC4E93A822A58390000F11F9 /* CKBulletinBoard */,
 				DC4E93A722A58390000F11F9 /* Products */,
+				DCF34DF322A5CD0000A5DB8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,19 +82,27 @@
 		DC4E93A822A58390000F11F9 /* CKBulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				DCF34DF222A5CCFE00A5DB8B /* CKBulletinBoard.entitlements */,
 				DC1733F222A587C9001B8E04 /* Resources */,
-				DC1733F122A5875A001B8E04 /* Model */,
-				DC4E93AB22A58390000F11F9 /* ViewController.swift */,
 				DC4E93AD22A58390000F11F9 /* Main.storyboard */,
+				DC1733F122A5875A001B8E04 /* Model */,
 				DCD6ADF722A5BFE300DAFA6D /* Controllers */,
 			);
 			path = CKBulletinBoard;
 			sourceTree = "<group>";
 		};
-		DCD6ADF722A5BFE300DAFA6D /* Controllers */ = {
+		DC772F0B22A6D1F8009A7A51 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
 				DCD6ADF522A5BAE200DAFA6D /* Message Controller.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		DCD6ADF722A5BFE300DAFA6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC772F0B22A6D1F8009A7A51 /* ModelControllers */,
 				DCD6ADFA22A5C01100DAFA6D /* ViewControllers */,
 			);
 			path = Controllers;
@@ -103,6 +114,14 @@
 				DCD6ADF822A5C00C00DAFA6D /* MessageListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DCF34DF322A5CD0000A5DB8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCF34DF422A5CD0000A5DB8B /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,14 @@
 				TargetAttributes = {
 					DC4E93A522A58390000F11F9 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -178,7 +205,6 @@
 			files = (
 				DCD6ADF622A5BAE200DAFA6D /* Message Controller.swift in Sources */,
 				DC1733F022A58754001B8E04 /* Message.swift in Sources */,
-				DC4E93AC22A58390000F11F9 /* ViewController.swift in Sources */,
 				DC4E93AA22A58390000F11F9 /* AppDelegate.swift in Sources */,
 				DCD6ADF922A5C00C00DAFA6D /* MessageListTableViewController.swift in Sources */,
 			);
@@ -326,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard/CKBulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DT6NQCY8FM;
 				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";
@@ -344,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard/CKBulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DT6NQCY8FM;
 				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";

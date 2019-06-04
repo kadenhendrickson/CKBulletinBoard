@@ -58,6 +58,7 @@ class MessageController {
             }
             guard let record = record, let message = Message(ckRecord: record) else {completion(false); return}
             self.messages.append(message)
+            print("Message Posted!")
             completion(true)
         }
         
@@ -80,5 +81,14 @@ class MessageController {
             completion(true)
             
         }
+    }
+    
+    
+    func subscribeToNotifications(completion: @escaping (Error?) -> Void) {
+        
+        let predicate = NSPredicate(value: true)
+        
+        
+        let subscription = CKQuerySubscription(recordType: Constants.recordKey, predicate: predicate, options: .firesOnRecordCreation)
     }
 }
